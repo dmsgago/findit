@@ -1,12 +1,20 @@
-from bottle import route, default_app
+from bottle import route, default_app, get, post, template, request, static_file, response
+import requests
+from requests_oauthlib import OAuth1
+from urlpase import parse_qs
 
-@route('/name/<name>')
-def nameindex(name='Stranger'):
-    return '<strong>Hello, %s!</strong>' % name
- 
+# OAuth1
+REQUEST_TOKEN_URL = " https://api.twitter.com/oauth/request_token"
+AUTHENTICATE_URL = "https://api.twitter.com/oauth/authenticate?oauth_token="
+ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
+CONSUMER_KEY = " ZtDMoDKKfSfIVLitOBt6Q3PVZ"
+CONSUMER_SECRET = "GxuEDZkEBqysEwfYnsAJFM7omrVDWGUpl2riDH5YxMYNIyqNLb"
+TOKENS = {}
+
 @route('/')
 def index():
-    return '<strong>Hello World!</strong>'
+    get_request_token()
+    
 
 # This must be added in order to do correct path lookups for the views
 import os
