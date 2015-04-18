@@ -1,5 +1,6 @@
 from bottle import route, default_app, get, post, template, request, static_file, response
-import requests, os
+import requests
+import os
 from requests_oauthlib import OAuth1
 from urlparse import parse_qs
 from bottle import TEMPLATE_PATH
