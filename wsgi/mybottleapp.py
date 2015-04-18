@@ -31,7 +31,7 @@ def get_access_token(TOKENS):
     TOKENS["access_token"] = credentials.get('oauth_token')[0]
     TOKENS["access_token_secret"] = credentials.get('oauth_token_secret')[0]
     return template('buscador.tpl')
-    
+'''    
 # OAuth1
 REQUEST_TOKEN_URL = " https://api.twitter.com/oauth/request_token"
 AUTHENTICATE_URL = "https://api.twitter.com/oauth/authenticate?oauth_token="
@@ -39,6 +39,7 @@ ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
 CONSUMER_KEY = "otZEhc6iU81FfeaY4PFs91y9N"
 CONSUMER_SECRET = "8ZspqHV33gQLeyHH2maeMLEiRKOgUBRY1TsdBVIL2PIFhxFzI7"
 TOKENS = {}
+'''
 '''
 @route('/')
 def index():
