@@ -17,7 +17,7 @@ def get_request_token():
     TOKENS["request_token_secret"] = credentials.get('oauth_token_secret')[0]
     authorize_url = AUTHENTICATE_URL + TOKENS["request_token"]
     return template('index.tpl', authorize_url=authorize_url)
-
+'''
 # Funcion que devuelve a la aplicacion un token de acceso
 def get_access_token(TOKENS):
     oauth = OAuth1(CONSUMER_KEY,
@@ -39,11 +39,11 @@ ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
 CONSUMER_KEY = "otZEhc6iU81FfeaY4PFs91y9N"
 CONSUMER_SECRET = "8ZspqHV33gQLeyHH2maeMLEiRKOgUBRY1TsdBVIL2PIFhxFzI7"
 TOKENS = {}
-
+'''
 @route('/')
 def index():
     get_request_token()
-
+'''
 # CALLBACK URL, Pagina que se carga tras la autorizacion del usuario
 @route('/map')
 def get_verifier():
@@ -68,3 +68,4 @@ def buscador_submit():
         return template('mapa.tpl')
     else:
         return "<p>Hubo un problema en el buscador</p>"
+'''
