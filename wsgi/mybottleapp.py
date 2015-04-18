@@ -29,3 +29,9 @@ TOKENS = {}
 @route('/')
 def index():
     get_request_token()
+
+# CALLBACK URL, Pagina que se carga tras la autorización del usuario
+@route('/map')
+def get_verifier():
+    TOKENS["verifier"] = request.query.oauth_verifier
+    get_access_token(TOKENS)
