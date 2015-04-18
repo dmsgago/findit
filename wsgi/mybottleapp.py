@@ -1,7 +1,7 @@
 from bottle import route, default_app, get, post, template, request, static_file, response
 import requests, os
 from requests_oauthlib import OAuth1
-from urlpase import parse_qs
+from urlparse import parse_qs
 from bottle import TEMPLATE_PATH
 TEMPLATE_PATH.append(os.path.join(os.environ['OPENSHIFT_REPO_DIR'], 'wsgi/views/'))
 
