@@ -8,7 +8,7 @@ TEMPLATE_PATH.append(os.path.join(os.environ['OPENSHIFT_REPO_DIR'], 'wsgi/views/
 application=default_app()
 
 
-# Función para obtener el token de solicitud y su secreto
+# Funcion para obtener el token de solicitud y su secreto
 def get_request_token():
     oauth = OAuth1(CONSUMER_KEY, client_secret=CONSUMER_SECRET)
     r = requests.post(url=REQUEST_TOKEN_URL, auth=oauth)
@@ -18,7 +18,7 @@ def get_request_token():
     authorize_url = AUTHENTICATE_URL + TOKENS["request_token"]
     return template('index.tpl', authorize_url=authorize_url)
 
-# Función que devuelve a la aplicacion un token de acceso
+# Funcion que devuelve a la aplicacion un token de acceso
 def get_access_token(TOKENS):
     oauth = OAuth1(CONSUMER_KEY,
                    client_secret=CONSUMER_SECRET,
@@ -44,7 +44,7 @@ TOKENS = {}
 def index():
     get_request_token()
 
-# CALLBACK URL, Pagina que se carga tras la autorización del usuario
+# CALLBACK URL, Pagina que se carga tras la autorizacion del usuario
 @route('/map')
 def get_verifier():
     TOKENS["verifier"] = request.query.oauth_verifier
