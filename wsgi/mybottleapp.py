@@ -24,8 +24,7 @@ def get_request_token():
     credentials = parse_qs(r.content)
     TOKENS["request_token"] = credentials.get('oauth_token')[0]
     TOKENS["request_token_secret"] = credentials.get('oauth_token_secret')[0]
-    authorize_url = AUTHENTICATE_URL + TOKENS["request_token"]
-    return template('index.tpl', authorize_url=authorize_url)
+    
 '''
 # Funcion que devuelve a la aplicacion un token de acceso
 def get_access_token(TOKENS):
@@ -44,6 +43,8 @@ def get_access_token(TOKENS):
 @route('/')
 def index():
     get_request_token()
+    authorize_url = AUTHENTICATE_URL + TOKENS["request_token"]
+    return template('index.tpl', authorize_url=authorize_url)
 '''
 # CALLBACK URL, Pagina que se carga tras la autorizacion del usuario
 @route('/map')
