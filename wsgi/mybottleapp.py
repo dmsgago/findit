@@ -1,4 +1,5 @@
-# -*- encoding: utf-8 -*-
+
+# -*- coding: utf-8 -*-
 from bottle import default_app, get, post, template, request, static_file, response
 import requests
 from requests_oauthlib import OAuth1
@@ -40,14 +41,14 @@ def get_access_token(TOKENS):
     TOKENS["access_token_secret"] = credentials.get('oauth_token_secret')[0]
     return template('buscador.tpl')
 '''
-@route('/')
+@get('/')
 def index():
     get_request_token()
     authorize_url = AUTHENTICATE_URL + TOKENS["request_token"]
     return template('index.tpl', authorize_url=authorize_url)
 '''
 # CALLBACK URL, Pagina que se carga tras la autorizacion del usuario
-@route('/map')
+@get('/map')
 def get_verifier():
     TOKENS["verifier"] = request.query.oauth_verifier
     get_access_token(TOKENS)
