@@ -7,7 +7,8 @@ from urlparse import parse_qs
 
 # Constantes OAuth1
 
-REQUEST_TOKEN_URL = " https://api.twitter.com/oauth/request_token"
+
+REQUEST_TOKEN_URL = "https://api.twitter.com/oauth/request_token"
 AUTHENTICATE_URL = "https://api.twitter.com/oauth/authenticate?oauth_token="
 ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
 
