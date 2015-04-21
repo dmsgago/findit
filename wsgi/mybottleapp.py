@@ -21,8 +21,10 @@ TOKENS = {}
 
 # Funcion para obtener el token de solicitud y su secreto
 def get_request_token():
-    oauth = OAuth1(CONSUMER_KEY,client_secret=CONSUMER_SECRET)
-    r = requests.post(url=REQUEST_TOKEN_URL,auth=oauth)
+    oauth = OAuth1(CONSUMER_KEY,
+                   client_secret=CONSUMER_SECRET,
+    )
+    r = requests.post(url=REQUEST_TOKEN_URL, auth=oauth)
     credentials = parse_qs(r.content)
     TOKENS["request_token"] = credentials.get('oauth_token')[0]
     TOKENS["request_token_secret"] = credentials.get('oauth_token_secret')[0]
