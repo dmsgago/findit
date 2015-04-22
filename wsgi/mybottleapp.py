@@ -52,7 +52,8 @@ def get_verifier():
     get_access_token(TOKENS)
     return template('buscador.tpl')
 
-# Carga el buscador
+# Recibe el dato a buscar y utiliza la API de Twitter para conseguir el fichero JSON
+@post('/map')
 
 
 # This must be added in order to do correct path lookups for the views

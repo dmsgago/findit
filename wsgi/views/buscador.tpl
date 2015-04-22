@@ -4,9 +4,8 @@
   </head>
   <body>
     <p>Busca un hashtag:</p>
-    <br />
     <form action="/map" method="post">
-      <p><textarea name="hashtag" id="textbox" rows="3" cols="50"></textarea></p>
+      <p><textarea name="hashtag" id="textbox" rows="1" cols="15"></textarea></p>
       <p><input type="submit" class="button" value="Enviar" /></p>
     </form>
   </body>
