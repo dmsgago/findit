@@ -53,7 +53,6 @@ def get_verifier():
     return template('buscador.tpl')
 
 # Recibe el dato a buscar y utiliza la API de Twitter para conseguir el fichero JSON
-@post('/map')
 
 
 # This must be added in order to do correct path lookups for the views
