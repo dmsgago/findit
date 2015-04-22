@@ -1,6 +1,6 @@
 
 # -*- coding: utf-8 -*-
-from bottle import default_app, get, post, template, request, static_file, response
+from bottle import default_app, get, post, template, request, static_file, response, json
 import requests
 from requests_oauthlib import OAuth1
 from urlparse import parse_qs
@@ -53,7 +53,19 @@ def get_verifier():
     return template('buscador.tpl')
 
 # Recibe el dato a buscar y utiliza la API de Twitter para conseguir el fichero JSON
-
+@post('/map')
+def findit():
+    elemento = request.forms.get("hashtag")
+    oauth = OAuth1(CONSUMER_KEY,
+                   client_secret=CONSUMER_SECRET,
+                   resource_owner_key=TOKENS["access_token"],
+                   resource_owner_secret=TOKENS["access_token_secret"])
+    url = 'https://api.twitter.com/1.1/search/tweets.json'
+    r = requests.get(url,elemento,'result_type=recent')
+    if r.status_code == 200:
+        return r.json()
+    else:
+        return "<p>Elemento no encontrado.</p>"
 
 # This must be added in order to do correct path lookups for the views
 import os
