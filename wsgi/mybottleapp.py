@@ -64,7 +64,7 @@ def findit():
     url = 'https://api.twitter.com/1.1/search/tweets.json'
     r = requests.get(url,elemento,'result_type=recent')
     if r.status_code == 200:
-        return r.json()
+        return ("<p>Elemento %s no encontrado.</p>"%elemento)
     else:
         return "<p>Elemento no encontrado.</p>"
 
