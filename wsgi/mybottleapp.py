@@ -27,16 +27,33 @@ def get_request_token():
     TOKENS["request_token"] = credentials.get('oauth_token')[0]
     TOKENS["request_token_secret"] = credentials.get('oauth_token_secret')[0]
 
+# Funcion que almacena el token de acceso y su secreto en el diccionario TOKENS
+def get_access_token(TOKENS):
+    oauth = OAuth1(CONSUMER_KEY,
+                   client_secret=CONSUMER_SECRET,
+                   resource_owner_key=TOKENS["request_token"],
+                   resource_owner_secret=TOKENS["request_token_secret"],
+                   verifier=TOKENS["verifier"],)
+    r = requests.post(url=ACCESS_TOKEN_URL, auth=oauth)
+    credentials = parse_qs(r.content)
+    TOKENS["access_token"] = credentials.get('oauth_token')[0]
+    TOKENS["access_token_secret"] = credentials.get('oauth_token_secret')[0]
+
 @get('/')
 def index():
     get_request_token()
     authorize_url = AUTHENTICATE_URL + TOKENS["request_token"]
     return template('index.tpl', authorize_url=authorize_url)
-'''
+
 # CALLBACK URL, Pagina que se carga tras la autorizacion del usuario
+@get('/map')
+def get_verifier():
+    TOKENS["verifier"] = request.query.oauth_verifier
+    get_access_token(TOKENS)
+    return template('tweet')
 
 # Carga el buscador
-'''
+
 
 # This must be added in order to do correct path lookups for the views
 import os
