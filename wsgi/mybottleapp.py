@@ -42,7 +42,7 @@ def get_access_token(TOKENS):
     TOKENS["access_token"] = credentials.get('oauth_token')[0]
     TOKENS["access_token_secret"] = credentials.get('oauth_token_secret')[0]
 
-def foauth(TOKENS):
+def send_oauth(TOKENS):
   oauth = OAuth1(CONSUMER_KEY,
                    client_secret=CONSUMER_SECRET,
                    resource_owner_key=TOKENS['access_token'],
@@ -66,7 +66,7 @@ def get_verifier():
 @post('/map')
 def findit():
     elementos["objeto"] = request.forms.get("hashtag")
-    oauth = foauth(TOKENS)
+    oauth = send_oauth(TOKENS)
     url = 'https://api.twitter.com/1.1/search/tweets.json'
     r = requests.get(url, params = elementos, auth=oauth)
     if r.status_code == 200:
