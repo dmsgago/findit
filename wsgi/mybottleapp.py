@@ -66,7 +66,7 @@ def findit():
     r = requests.get(url)
 #    r = requests.get(url,elemento,'result_type=recent')
 #    if r.status_code == 200:
-        return ("<p>%s</p>"%r.json())
+        return r.json()
 #    else:
 #        return "<p>Elemento no encontrado.</p>"
 
