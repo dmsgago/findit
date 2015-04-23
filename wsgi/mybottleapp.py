@@ -57,6 +57,8 @@ def get_verifier():
 @post('/map')
 def findit():
     elemento = request.forms.get("hashtag")
+    return "%s"%TOKENS["access_token"]
+'''
     oauth = OAuth1(CONSUMER_KEY,
                    client_secret=CONSUMER_SECRET,
                    resource_owner_key=TOKENS["access_token"],
@@ -68,6 +70,7 @@ def findit():
         return "<p>%s</p>"%r.text
     else:
         return "<p>Elemento no encontrado.</p>"
+'''
 
 # This must be added in order to do correct path lookups for the views
 import os
