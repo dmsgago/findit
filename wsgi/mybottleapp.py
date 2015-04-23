@@ -18,6 +18,8 @@ CONSUMER_SECRET = "8ZspqHV33gQLeyHH2maeMLEiRKOgUBRY1TsdBVIL2PIFhxFzI7"
 
 TOKENS = {}
 
+elementos = {}
+
 # Funcion para obtener el token de solicitud y su secreto
 def get_request_token():
     oauth = OAuth1(CONSUMER_KEY,
