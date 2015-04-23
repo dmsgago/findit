@@ -63,9 +63,10 @@ def findit():
 #                   resource_owner_secret=TOKENS["access_token_secret"])
 #    url = 'https://api.twitter.com/1.1/search/tweets.json'
     r = requests.get('https://api.twitter.com/1.1/search/tweets.json?q=%23superbowl&result_type=recent')
+    json = r.json()
 #    r = requests.get(url,elemento,'result_type=recent')
 #    if r.status_code == 200:
-        return r.json()
+        return "<p>%s</p>"%json
 #    else:
 #        return "<p>Elemento no encontrado.</p>"
 
