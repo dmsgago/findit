@@ -42,6 +42,13 @@ def get_access_token(TOKENS):
     TOKENS["access_token"] = credentials.get('oauth_token')[0]
     TOKENS["access_token_secret"] = credentials.get('oauth_token_secret')[0]
 
+def foauth(TOKENS):
+  oauth = OAuth1(CONSUMER_KEY,
+                   client_secret=CONSUMER_SECRET,
+                   resource_owner_key=TOKENS['access_token'],
+                   resource_owner_secret=TOKENS['access_token_secret'])
+  return oauth
+    
 @get('/')
 def index():
     get_request_token()
@@ -58,15 +65,10 @@ def get_verifier():
 # Recibe el dato a buscar y utiliza la API de Twitter para conseguir el fichero JSON
 @post('/map')
 def findit():
-    TOKENS["verifier"] = request.query.oauth_verifier
-    get_access_token(TOKENS)
     elementos["objeto"] = request.forms.get("hashtag")
-    oauth = OAuth1(CONSUMER_KEY,
-                   client_secret=CONSUMER_SECRET,
-                   resource_owner_key=TOKENS["access_token"],
-                   resource_owner_secret=TOKENS["access_token_secret"])
+    oauth = foauth(TOKENS)
     url = 'https://api.twitter.com/1.1/search/tweets.json'
-    r = requests.get(url, params = elementos)
+    r = requests.get(url, params = elementos, auth=oauth)
     if r.status_code == 200:
         json = json.loads(r.text)
         return "<p>%s</p>"%r.text
