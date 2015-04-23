@@ -62,8 +62,7 @@ def findit():
 #                   resource_owner_key=TOKENS["access_token"],
 #                   resource_owner_secret=TOKENS["access_token_secret"])
 #    url = 'https://api.twitter.com/1.1/search/tweets.json'
-    url = 'https://api.twitter.com/1.1/search/tweets.json?q=%23superbowl&result_type=recent'
-    r = requests.get(url)
+    r = requests.get('https://api.twitter.com/1.1/search/tweets.json?q=%23superbowl&result_type=recent')
 #    r = requests.get(url,elemento,'result_type=recent')
 #    if r.status_code == 200:
         return r.json()
