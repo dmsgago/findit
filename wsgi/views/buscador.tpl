@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>.::Usando la API de twitter::.</title>
+    <title>.::Usando la API de b&uacute;squeda de twitter::.</title>
   </head>
   <body>
     <p>Busca un hashtag:</p>
