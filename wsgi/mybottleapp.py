@@ -65,17 +65,14 @@ def get_verifier():
 # Recibe el dato a buscar y utiliza la API de Twitter para conseguir el fichero JSON
 @post('/map')
 def findit():
-    elementos["objeto"] = request.forms.get("hashtag")
+    elementos["q"] = request.forms.get("hashtag")
     oauth = send_oauth(TOKENS)
     url = "https://api.twitter.com/1.1/search/tweets.json"
     r = requests.get(url, params=elementos, auth=oauth)
-    '''
     if r.status_code == 200:
         return "<p>%s</p>"%r.text
     else:
         return "<p>%s</p>"%r.text
-    '''
-    return "%s"%r.url
 
 # This must be added in order to do correct path lookups for the views
 import os
