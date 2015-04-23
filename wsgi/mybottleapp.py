@@ -56,17 +56,19 @@ def get_verifier():
 # Recibe el dato a buscar y utiliza la API de Twitter para conseguir el fichero JSON
 @post('/map')
 def findit():
-    elemento = request.forms.get("hashtag")
-    oauth = OAuth1(CONSUMER_KEY,
-                   client_secret=CONSUMER_SECRET,
-                   resource_owner_key=TOKENS["access_token"],
-                   resource_owner_secret=TOKENS["access_token_secret"])
-    url = 'https://api.twitter.com/1.1/search/tweets.json'
-    r = requests.get(url,elemento,'result_type=recent')
-    if r.status_code == 200:
+#    elemento = request.forms.get("hashtag")
+#    oauth = OAuth1(CONSUMER_KEY,
+#                   client_secret=CONSUMER_SECRET,
+#                   resource_owner_key=TOKENS["access_token"],
+#                   resource_owner_secret=TOKENS["access_token_secret"])
+#    url = 'https://api.twitter.com/1.1/search/tweets.json'
+    url = 'https://api.twitter.com/1.1/search/tweets.json?q=%23superbowl&result_type=recent'
+    r = requests.get(url)
+#    r = requests.get(url,elemento,'result_type=recent')
+#    if r.status_code == 200:
         return ("<p>%s</p>"%r.json())
-    else:
-        return "<p>Elemento no encontrado.</p>"
+#    else:
+#        return "<p>Elemento no encontrado.</p>"
 
 # This must be added in order to do correct path lookups for the views
 import os
