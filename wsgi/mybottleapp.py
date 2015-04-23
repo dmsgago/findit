@@ -67,8 +67,8 @@ def get_verifier():
 def findit():
     elementos["objeto"] = request.forms.get("hashtag")
     oauth = send_oauth(TOKENS)
-    url = 'https://api.twitter.com/1.1/search/tweets.json'
-    r = requests.get(url, params=elementos, auth=oauth)
+    url = 'https://api.twitter.com/1.1/search/tweets.json?q=%23superbowl'
+    r = requests.get(url, auth=oauth)
     if r.status_code == 200:
         json = json.loads(r.text)
         return "<p>%s</p>"%r.text
