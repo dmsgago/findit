@@ -69,7 +69,7 @@ def findit():
         json = json.loads(r.text)
         return "<p>%s</p>"%r.text
     else:
-        return "<p>Elemento no encontrado.</p>"
+        return "<p>%s</p>"%r.text
 
 # This must be added in order to do correct path lookups for the views
 import os
