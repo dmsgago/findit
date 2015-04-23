@@ -67,12 +67,15 @@ def get_verifier():
 def findit():
     elementos["objeto"] = request.forms.get("hashtag")
     oauth = send_oauth(TOKENS)
+    '''
     url = 'https://api.twitter.com/1.1/search/tweets.json?'
     r = requests.get(url, params=elementos, auth=oauth)
     if r.status_code == 200:
         return "<p>%s</p>"%r.text
     else:
         return "<p>%s</p>"%r.text
+    '''
+    return "<p>%s</p>"%elementos["objeto"]
 
 # This must be added in order to do correct path lookups for the views
 import os
