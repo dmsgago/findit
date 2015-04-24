@@ -1,19 +1,7 @@
-Bottle on OpenShift
++FINDIT
 ===================
 
-This git repository helps you get up and running quickly w/ a Bottle installation
-on the Red Hat OpenShift PaaS.
++Aplicación que busca elementos en Twitter (username, hashtag, tuit's) y devuelve su posición en un mapa). Esta aplicación pertenece al proyecto final del módulo de "Lenguaje de Marcas", del ciclo formativo de grado superior "ASIR", en el "IES Gonzalo Nazareno".
++Puedes probar la aplicación en:
 
-
-Running on OpenShift
-----------------------------
-
-Create an account at https://www.openshift.com/
-
-Create a python application based on the code in this repository
-
-    rhc app create bottle python-2.6 --from-code https://github.com/openshift-quickstart/bottle-openshift-quickstart.git
-
-That's it, you can now checkout your application at:
-
-    http://bottle-$yournamespace.rhcloud.com
++ http://findit-gago.rhcloud.com
