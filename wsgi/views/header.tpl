@@ -9,4 +9,25 @@
     <title>findIT</title>
   </head>
   <body>
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="sr-only">Navegación</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="logotipo" href="/"><span>tuitgenerator</span></a>
+		</div>
+		<div class="navbar-collapse navbar-responsive-collapse collapse">
+		  <ul class="nav navbar-nav pull-right">
+			<li><a href="tuit" title="Generar un tuit">Tuit</a></li>
+			<li><a href="retuit" title="Generar un retuit">Retuit</a></li>
+			<li><a href="favorito" title="Marcar un tuit como favorito">Favorito</a></li>
+			<li><a href="usuario" title="Mostrar información de un perfil">Usuario</a></li>
+		  </ul>
+		</div>
+	  </div>
+	</div>
   
