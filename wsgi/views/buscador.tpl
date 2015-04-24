@@ -8,6 +8,7 @@
       <p><input name="longitud" size="10" maxlength="15" type="text"/></p>
       <p><input name="radio" size="10" maxlength="15" type="text"/></p>
       <p><input type="submit" class="button" value="Enviar" /></p>
+      <!-- Bootstrap -->
       <script src="static/js/vendor/bootstrap.min.js"></script>
     </form>
   </div>  
