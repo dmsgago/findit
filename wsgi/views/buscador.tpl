@@ -1,8 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>.::Usando la API de b&uacute;squeda de twitter::.</title>
-  </head>
-  <body>
+% include('header.tpl')
     <p>Busca un hashtag:</p>
     <form action="/map" method="post">
       <p><input name="objeto" size="50" maxlength="500" type="text" required placeholder="Objeto a buscar: #Hashtag, @username, texto..." autofocus/></p>
