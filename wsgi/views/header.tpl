@@ -16,7 +16,7 @@
 		  </div>
 		  <div class="navbar-collapse navbar-responsive-collapse collapse">
 		       	<ul class="nav navbar-nav pull-right">
-		       	   <li><a href="map" title="Busca un objeto en Twitter">Findit</a></li>
+		       	   <li><a href="/" title="Busca un objeto en Twitter">Findit</a></li>
 			 </ul>
 		  </div>
 	     </div>
