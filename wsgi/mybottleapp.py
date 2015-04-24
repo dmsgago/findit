@@ -72,7 +72,7 @@ def findit():
     if r.status_code == 200:
         return "<p>%s</p>"%r.text
     else:
-        return "<p>%s</p>"%r.text
+        return "<p>Elemento no encontrado</p>"
 
 # This must be added in order to do correct path lookups for the views
 import os
