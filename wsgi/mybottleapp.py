@@ -65,7 +65,7 @@ def get_verifier():
 # Recibe el dato a buscar y utiliza la API de Twitter para conseguir el fichero JSON
 @post('/map')
 def findit():
-    elementos["q"] = request.forms.get("objeto")
+    elementos["q"] = request.forms.get("hashtag")
     oauth = send_oauth(TOKENS)
     url = "https://api.twitter.com/1.1/search/tweets.json"
     r = requests.get(url, params=elementos, auth=oauth)
