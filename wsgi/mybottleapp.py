@@ -66,13 +66,13 @@ def get_verifier():
 @post('/map')
 def findit():
     tipobusqueda = request.forms.get("TipoBusqueda")
-    if tipobusqueda = 1:
+    if tipobusqueda == 1:
         elementos["q"] = request.forms.get("hashtag")
         oauth = send_oauth(TOKENS)
         url = "https://api.twitter.com/1.1/search/tweets.json"
         r = requests.get(url, params=elementos, auth=oauth)
     else:
-        elementos["screen_name"] == request.forms.get("username")
+        elementos["screen_name"] = request.forms.get("username")
         oauth = send_oauth(TOKENS)
         url = "https://api.twitter.com/1.1/statuses/user_timeline.json"
         r = requests.get(url, params=elementos, auth=oauth)
