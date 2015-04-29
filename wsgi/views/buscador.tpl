@@ -1,7 +1,7 @@
 % include('header.tpl')
 <div class="jumbotron">
   <div class="container">
-    <p>Busca por un elemento:
+    <p>
     	     Buscar por hashtag:
     	     <input name="TipoBusqueda" id="ElegirHashtag" value="0" type="radio"/>
 	     <br/>
