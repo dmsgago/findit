@@ -31,7 +31,7 @@ function initialize() {
       position: myLatlng,
       map: map,
       title: 'Hello World!'
-  });
+      });
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
