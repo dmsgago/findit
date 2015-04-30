@@ -75,12 +75,11 @@ def findit():
         elementos["screen_name"] = request.forms.get("username")
         oauth = send_oauth(TOKENS)
         url = "https://api.twitter.com/1.1/statuses/user_timeline.json"
-        r = requests.get(url, params=elementos, auth=oauth)
-        
+        r = requests.get(url, params=elementos, auth=oauth)        
     if r.status_code == 200:
-        return "<p>%s</p>"%r.text
+        return template('mapa.tpl')
     else:
-        return "<p>Elemento no encontrado</p>"
+        return ('<p>JSON no obtenido.</p>')
 
 # This must be added in order to do correct path lookups for the views
 import os
