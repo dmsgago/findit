@@ -1,4 +1,8 @@
 % include('header.tpl')
+<div class="jumbotron">
+  <div class="container">
     <a href="{{authorize_url}}">Buscar Tuit</a>
-  </body>
+  </div>
+</div>
+</body>
 </html>
