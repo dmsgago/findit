@@ -43,7 +43,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		  </div>
 	     </div>
 	</div>
-	<div class="map-canvas">
+	<div id="map-canvas">
 	</div>
   </body>
 </html>
