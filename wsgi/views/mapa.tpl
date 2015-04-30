@@ -17,7 +17,7 @@ function initialize() {
     zoom: 4,
     center: myLatlng
   }
-  var map = new google.maps.Map(document.getElementById('container'), mapOptions);
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   var marker = new google.maps.Marker({
       position: myLatlng,
@@ -43,7 +43,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		  </div>
 	     </div>
 	</div>
-	<div class="container">
+	<div class="map-canvas">
 	</div>
   </body>
 </html>
