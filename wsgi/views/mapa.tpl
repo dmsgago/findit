@@ -6,9 +6,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <style>
       html, body, #map-canvas {
-        height: 100%;
-        margin: 10px;
-        padding: 10px
+       height: 100%;
+       margin: 0px;
+       padding: 0px;
+       top: 51px;
       }
     </style>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
