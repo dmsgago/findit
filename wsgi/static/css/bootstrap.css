@@ -6582,3 +6582,9 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+/* Modificaciones FINDIT */
+#map-canvas{
+	height: 100%;
+        margin: 0px;
+        padding: 0px
+}
