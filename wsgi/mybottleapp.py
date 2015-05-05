@@ -67,7 +67,7 @@ def get_verifier():
 @post('/map')
 def findit():
     tipobusqueda = request.forms.get("TipoBusqueda")
-    if tipobusqueda == 1:
+    if tipobusqueda == 0:
         elementos["q"] = request.forms.get("hashtag")
         oauth = send_oauth(TOKENS)
         url = "https://api.twitter.com/1.1/search/tweets.json"
