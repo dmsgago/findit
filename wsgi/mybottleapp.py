@@ -19,6 +19,7 @@ CONSUMER_SECRET = "8ZspqHV33gQLeyHH2maeMLEiRKOgUBRY1TsdBVIL2PIFhxFzI7"
 TOKENS = {}
 
 elementos = {}
+ubicaciones = []
 
 # Funcion para obtener el token de solicitud y su secreto
 def get_request_token():
@@ -73,10 +74,12 @@ def findit():
         r = requests.get(url, params=elementos, auth=oauth)
         if r.status_code == 200:
             respuesta = r.json()
+                # Recorre cada tuit
             for tweet in respuesta["array"]["statuses"]:
                 if tweet["geo"] != None:
-                    tuits.append(tweet["place"]["coordinates"][0][0][1])
-                return template('mapa.tpl', tuits = tuits)
+                    # Almacena cada geolicalizacion en una lista
+                    ubicaciones.append(tweet["place"]["coordinates"][0][0][1])
+                return template('mapa.tpl', ubicaciones = ubicaciones)
         else:
             return ('<p>JSON no obtenido.</p>')
     else:
