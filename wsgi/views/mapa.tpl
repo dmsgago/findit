@@ -27,11 +27,20 @@ function initialize() {
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-  var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: 'Hello World!'
+  var marker, i;
+
+    for (i = 0; i < ubicaciones.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(ubicaciones[i], ubicaciones[i]),
+        map: map
       });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          // infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
