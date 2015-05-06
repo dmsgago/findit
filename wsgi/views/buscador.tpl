@@ -3,7 +3,7 @@
   <div class="container">
     <p>
     	     Buscar por hashtag:
-    	     <input name="TipoBusqueda" id="ElegirHashtag" value="0" type="radio"/>
+    	     <input name="TipoBusqueda" id="ElegirHashtag"  value="0" type="radio"/>
 	     <br/>
 	     Buscar por usuario
     	     <input name="TipoBusqueda" id="ElegirUsuario" value="1" type="radio"/>
