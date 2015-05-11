@@ -81,7 +81,10 @@ def findit():
                     ubicaciones.append(tweet["place"]["coordinates"][0][0][1])
         else:
             return ('<p>JSON no obtenido.</p>')
-        return ('<p>%f</p>'%ubicaciones[0])
+        if len() == 0:
+            return '<p> No hay </p>'
+        else:
+            return ('<p>%f</p>'%ubicaciones[0])
     else:
         elementos["screen_name"] = request.forms.get("username")
         oauth = send_oauth(TOKENS)
