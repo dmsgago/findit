@@ -67,7 +67,6 @@ def get_verifier():
 @post('/map')
 def findit():
     tipobusqueda = request.forms.get("TipoBusqueda")
-    return "<p>%s</p>" %tipobusqueda
     if tipobusqueda == "0":
         elementos["q"] = request.forms.get("hashtag")
         oauth = send_oauth(TOKENS)
