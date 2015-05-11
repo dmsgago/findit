@@ -79,13 +79,9 @@ def findit():
                 if tweet["geo"] != None:
                     # Almacena cada geolicalizacion en una lista
                     ubicaciones.append(tweet["place"]["coordinates"][0][0][1])
-                    # return template('mapa.tpl', ubicaciones = ubicaciones)
-                    if len(ubicaciones) == 0:
-                        return '<p>No hay ubicaciones</p>'
-                    else:
-                        return ('<p>%f</p>'%ubicaciones[0])
         else:
             return ('<p>JSON no obtenido.</p>')
+        return ('<p>%f</p>'%ubicaciones[0])
     else:
         elementos["screen_name"] = request.forms.get("username")
         oauth = send_oauth(TOKENS)
