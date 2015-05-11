@@ -80,7 +80,10 @@ def findit():
                     # Almacena cada geolicalizacion en una lista
                     ubicaciones.append(tweet["place"]["coordinates"][0][0][1])
                     # return template('mapa.tpl', ubicaciones = ubicaciones)
-                return ('<p>%f</p>'%ubicaciones[0])
+                    if len(ubicaciones) == 0:
+                        return '<p>No hay ubicaciones</p>'
+                    else:
+                        return ('<p>%f</p>'%ubicaciones[0])
         else:
             return ('<p>JSON no obtenido.</p>')
     else:
