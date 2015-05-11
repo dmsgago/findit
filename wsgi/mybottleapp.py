@@ -81,7 +81,7 @@ def findit():
                     ubicaciones.append(tweet["place"]["coordinates"][0][0][1])
         else:
             return ('<p>JSON no obtenido.</p>')
-        if len() == 0:
+        if len(ubicaciones) == 0:
             return '<p> No hay </p>'
         else:
             return ('<p>%f</p>'%ubicaciones[0])
