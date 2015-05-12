@@ -78,14 +78,14 @@ def findit():
                 # Recorre cada tuit
             for tweet in respuesta["statuses"]:
                 if tweet["geo"] != None:
-                    # Almacena cada geolicalizacion en una lista
-                    ubicaciones.append(tweet["place"]["coordinates"][0][0][1])
+                    # Almacena la ubicacion en una lista
+                    ubicaciones.append(tweet["geo"]["coordinates"])
         else:
             return ('<p>JSON no obtenido.</p>')
         if len(ubicaciones) == 0:
             return '<p> No hay </p>'
         else:
-            return ('<p>%f</p>'%ubicaciones[0])
+            return ('<p>%f</p>'%ubicaciones[0][0])
     else:
         elementos["screen_name"] = request.forms.get("username")
         oauth = send_oauth(TOKENS)
