@@ -69,6 +69,7 @@ def findit():
     tipobusqueda = request.forms.get("TipoBusqueda")
     if tipobusqueda == "0":
         elementos["q"] = request.forms.get("hashtag")
+        elementos["count"] = "100"
         oauth = send_oauth(TOKENS)
         url = "https://api.twitter.com/1.1/search/tweets.json"
         r = requests.get(url, params=elementos, auth=oauth)
