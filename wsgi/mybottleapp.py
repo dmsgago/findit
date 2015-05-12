@@ -80,7 +80,7 @@ def findit():
             for tweet in respuesta["statuses"]:
                 if tweet["geo"] != None:
                     # Comprueba que la geolocalizacion no es cero
-                    if tweet["geo"]["coordinates"][0] != 0 AND tweet["geo"]["coordinates"][1] != 0:
+                    if tweet["geo"]["coordinates"][0] != 0 and tweet["geo"]["coordinates"][1] != 0:
                         # Almacena la ubicacion en una lista
                         ubicaciones.append(tweet["geo"]["coordinates"])
         else:
