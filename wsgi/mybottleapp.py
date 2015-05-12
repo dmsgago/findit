@@ -85,7 +85,7 @@ def findit():
         if len(ubicaciones) == 0:
             return '<p> No hay </p>'
         else:
-            return ('<p>%f</p>'%ubicaciones)
+            return ('<p>%s</p>'%ubicaciones)
     else:
         elementos["screen_name"] = request.forms.get("username")
         oauth = send_oauth(TOKENS)
