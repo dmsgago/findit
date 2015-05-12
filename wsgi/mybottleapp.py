@@ -73,19 +73,24 @@ def findit():
         oauth = send_oauth(TOKENS)
         url = "https://api.twitter.com/1.1/search/tweets.json"
         r = requests.get(url, params=elementos, auth=oauth)
+
         if r.status_code == 200:
             respuesta = r.json()
                 # Recorre cada tuit
             for tweet in respuesta["statuses"]:
                 if tweet["geo"] != None:
-                    # Almacena la ubicacion en una lista
-                    ubicaciones.append(tweet["geo"]["coordinates"])
+                    # Comprueba que la geolocalizacion no es cero
+                    if tweet["geo"]["coordinates"][0] != 0 AND tweet["geo"]["coordinates"][1] != 0:
+                        # Almacena la ubicacion en una lista
+                        ubicaciones.append(tweet["geo"]["coordinates"])
         else:
             return ('<p>JSON no obtenido.</p>')
+
+        # Comprueba que se han obtenido ubicaciones
         if len(ubicaciones) == 0:
-            return '<p> No hay </p>'
+            return '<p> No hay ubicaciones </p>'
         else:
-            return ('<p>%s</p>'%ubicaciones)
+            return template('mapa.tpl', ubicaciones=ubicaciones)
     else:
         elementos["screen_name"] = request.forms.get("username")
         oauth = send_oauth(TOKENS)
