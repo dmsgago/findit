@@ -43,7 +43,7 @@ var ubicaciones = {{ubicaciones}};
         }
       })(marker, i));
 }
-
+}
 google.maps.event.addDomListener(window, 'load', initialize);
 
     </script>
