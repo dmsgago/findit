@@ -20,7 +20,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
     <script>
 function initialize() {
-  var myLatlng = new google.maps.LatLng(ubicaciones[0]);
+var ubicaciones = {{ubicaciones}};
+var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
   var mapOptions = {
     zoom: 4,
     center: myLatlng
@@ -29,7 +30,6 @@ function initialize() {
 
   var marker, i;
 
-var ubicaciones = {{ubicaciones}};
     for (i = 0; i < ubicaciones.length; i++) {  
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(ubicaciones[i][0], ubicaciones[i][1]),
