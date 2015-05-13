@@ -30,7 +30,6 @@ function initialize() {
   var marker, i;
 
 var ubicaciones = {{ubicaciones}};
-window.alert(ubicaciones);
     for (i = 0; i < ubicaciones.length; i++) {  
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(ubicaciones[i][0], ubicaciones[i][1]),
