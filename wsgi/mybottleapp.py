@@ -67,6 +67,7 @@ def get_verifier():
 @post('/map')
 def findit():
     tipobusqueda = request.forms.get("TipoBusqueda")
+    ubicaciones = []
     if tipobusqueda == "0":
         elementos["q"] = request.forms.get("hashtag")
         elementos["count"] = "100"
