@@ -98,6 +98,7 @@ def findit():
         r = requests.get(url, params=elementos, auth=oauth)        
         if r.status_code == 200:
             respuesta = r.json()
+            return ('<p> %s </p>'%respuesta)
                 # Recorre cada tuit
             for tweet in respuesta:
                 if tweet["geo"] != None:
