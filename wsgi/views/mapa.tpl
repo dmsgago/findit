@@ -23,7 +23,7 @@ function initialize() {
 var ubicaciones = {{ubicaciones}};
 var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
   var mapOptions = {
-    zoom: 4,
+    zoom: 6,
     center: myLatlng
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
