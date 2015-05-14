@@ -9,7 +9,6 @@
        height: 100%;
        margin: 0px;
        padding: 0px;
-       top: 51px;
       }
     </style>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
