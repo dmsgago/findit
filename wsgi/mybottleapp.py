@@ -77,8 +77,7 @@ def findit():
         if r.status_code == 200:
             respuesta = r.json()
                 # Recorre cada tuit
-            for tweet in respuesta["statuses"]:
-                
+            for tweet in respuesta["statuses"]:                
                 if tweet["geo"] != None:
                     # Comprueba que la geolocalizacion no es cero
                     if tweet["geo"]["coordinates"][0] != 0 and tweet["geo"]["coordinates"][1] != 0:
