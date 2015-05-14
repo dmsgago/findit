@@ -74,7 +74,6 @@ def findit():
         oauth = send_oauth(TOKENS)
         url = "https://api.twitter.com/1.1/search/tweets.json"
         r = requests.get(url, params=elementos, auth=oauth)
-
         if r.status_code == 200:
             respuesta = r.json()
                 # Recorre cada tuit
@@ -98,9 +97,22 @@ def findit():
         url = "https://api.twitter.com/1.1/statuses/user_timeline.json"
         r = requests.get(url, params=elementos, auth=oauth)        
         if r.status_code == 200:
-            return template('mapa.tpl')
+            respuesta = r.json()
+                # Recorre cada tuit
+            for tweet in respuesta["statuses"]:
+                if tweet["geo"] != None:
+                    # Comprueba que la geolocalizacion no es cero
+                    if tweet["geo"]["coordinates"][0] != 0 and tweet["geo"]["coordinates"][1] != 0:
+                        # Almacena la ubicacion en una lista
+                        ubicaciones.append(tweet["geo"]["coordinates"])
         else:
             return ('<p>JSON no obtenido.</p>')
+
+        # Comprueba que se han obtenido ubicaciones
+        if len(ubicaciones) == 0:
+            return '<p> No hay ubicaciones </p>'
+        else:
+            return template('mapa.tpl', ubicaciones=ubicaciones)
 
 # This must be added in order to do correct path lookups for the views
 import os
