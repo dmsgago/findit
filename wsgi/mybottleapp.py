@@ -91,6 +91,8 @@ def findit():
             return '<p> No hay ubicaciones </p>'
         else:
             return template('mapa.tpl', ubicaciones=ubicaciones)
+
+    #Busqueda por nombre de usuario
     else:
         elementos["screen_name"] = request.forms.get("username")
         oauth = send_oauth(TOKENS)
