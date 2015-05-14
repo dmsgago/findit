@@ -94,8 +94,7 @@ def findit():
 
     #Busqueda por nombre de usuario
     else:
-        elementos["screen_name"] = request.forms.get("username")
-        return ('<p> %s </p>'%elementos["screen_name"])
+        elementos["screen_name"] = request.forms.get("username"))
         oauth = send_oauth(TOKENS)
         url = "https://api.twitter.com/1.1/statuses/user_timeline.json"
         r = requests.get(url, params=elementos, auth=oauth)        
