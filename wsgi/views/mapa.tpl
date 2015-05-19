@@ -34,9 +34,9 @@ var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
         position: new google.maps.LatLng(ubicaciones[i][0], ubicaciones[i][1]),
         map: map
       });
-      var infowindow = new google.maps.InfoWindow({
-	content: "<img src='"+{{imagen}}+"' style='float:left; padding: 5px;' /><strong>"+{{nombre}}+"</strong>: "+{{tuit}}
-      });
+     // var infowindow = new google.maps.InfoWindow({
+//	content: "<img src='"+{{imagen}}+"' style='float:left; padding: 5px;' /><strong>"+{{nombre}}+"</strong>: "+{{tuit}}
+//      });
 		    
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
