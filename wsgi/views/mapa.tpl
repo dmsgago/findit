@@ -42,9 +42,8 @@ var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
 	 // content: "<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+tuit
       });
 		    
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      google.maps.event.addListener(marker, 'click', (function() {
         return function() {
-          // infowindow.setContent(locations[i][0]);
           infowindow.open(map, marker);
         }
       })(marker, i));
