@@ -30,16 +30,16 @@ var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-      var infowindow = new google.maps.InfoWindow({
-	 // content: "<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+tuit
-      });
-
   var marker, i;
 
     for (i = 0; i < ubicaciones.length; i++) {  
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(ubicaciones[i][0], ubicaciones[i][1]),
         map: map
+      });
+
+      var infowindow = new google.maps.InfoWindow({
+	 // content: "<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+tuit
       });
 		    
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
