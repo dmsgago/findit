@@ -46,7 +46,7 @@ var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
         }
       })(marker, i));
 }
-}
+// }
 google.maps.event.addDomListener(window, 'load', initialize);
 
     </script>
