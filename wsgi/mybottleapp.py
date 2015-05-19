@@ -68,7 +68,9 @@ def get_verifier():
 def findit():
     tipobusqueda = request.forms.get("TipoBusqueda")
     ubicaciones = []
-    contenido = []
+    tuit = ""
+    nombreusuario = ""
+    imagenperfil = ""
     if tipobusqueda == "0":
         elementos["q"] = request.forms.get("hashtag")
         elementos["count"] = "100"
@@ -84,9 +86,9 @@ def findit():
                     if tweet["geo"]["coordinates"][0] != 0 and tweet["geo"]["coordinates"][1] != 0:
                         # Almacena la ubicacion en una lista
                         ubicaciones.append(tweet["geo"]["coordinates"])
-                contenido.append(tweet["text"])
-                contenido.append(tweet["user"]["name"])
-                contenido.append(tweet["user"]["profile_image_url"])
+                tuit = tweet["text"]
+                nombreusuario = tweet["user"]["name"]
+                imagenperfil = tweet["user"]["profile_image_url"]
         else:
             return ('<p>JSON no obtenido.</p>')
 
@@ -94,7 +96,7 @@ def findit():
         if len(ubicaciones) == 0:
             return '<p> No hay ubicaciones </p>'
         else:
-            return template('mapa.tpl', ubicaciones=ubicaciones, contenido=contenido)
+            return template('mapa.tpl', ubicaciones=ubicaciones, tuit=tuit, nombre=nombreusuario, imagen=imagenperfil)
 
     #Busqueda por nombre de usuario
     else:
@@ -111,9 +113,9 @@ def findit():
                     if tweet["geo"]["coordinates"][0] != 0 and tweet["geo"]["coordinates"][1] != 0:
                         # Almacena la ubicacion en una lista
                         ubicaciones.append(tweet["geo"]["coordinates"])
-                contenido.append(tweet["text"])
-                contenido.append(tweet["user"]["name"])
-                contenido.append(tweet["user"]["profile_image_url"])
+                tuit = tweet["text"]
+                nombreusuario = tweet["user"]["name"]
+                imagenperfil = tweet["user"]["profile_image_url"]
         else:
             return ('<p>JSON no obtenido.</p>')
 
@@ -121,7 +123,7 @@ def findit():
         if len(ubicaciones) == 0:
             return '<p> No hay ubicaciones </p>'
         else:
-            return template('mapa.tpl', ubicaciones=ubicaciones, contenido=contenido)
+            return template('mapa.tpl', ubicaciones=ubicaciones, tuit=tuit, nombre=nombreusuario, imagen=imagenperfil)
 
 # This must be added in order to do correct path lookups for the views
 import os
