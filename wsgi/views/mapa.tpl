@@ -35,8 +35,12 @@ var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
         map: map
       });
 
+      var imagen = {{imagen}};
+      var nombre = {{nombre}};		    
+      var tuit = {{tuit}};
+		    
       var infowindow = new google.maps.InfoWindow({
-	 content: "<img src='"+{{imagen}}+"' style='float:left; padding: 5px;' /><strong>"+{{nombre}}+"</strong>: "+{{tuit}}
+	 content: "<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+tuit
       });
 		    
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
