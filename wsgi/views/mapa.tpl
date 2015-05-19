@@ -20,6 +20,9 @@
     <script>
 function initialize() {
 var ubicaciones = {{ubicaciones}};
+var tuit = {{tuit}};
+var nombre = {{nombre}};
+var imagen = {{imagen}};
 var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
   var mapOptions = {
     zoom: 6,
@@ -34,10 +37,6 @@ var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
         position: new google.maps.LatLng(ubicaciones[i][0], ubicaciones[i][1]),
         map: map
       });
-
-      var imagen = {{imagen}};
-      var nombre = {{nombre}};		    
-      var tuit = {{tuit}};
 		    
       var infowindow = new google.maps.InfoWindow({
 	 // content: "<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+tuit
