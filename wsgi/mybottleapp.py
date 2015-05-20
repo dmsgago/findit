@@ -68,9 +68,9 @@ def get_verifier():
 def findit():
     tipobusqueda = request.forms.get("TipoBusqueda")
     ubicaciones = []
-    tuit = ""
-    nombreusuario = ""
-    imagenperfil = ""
+    tuit = []
+    nombreusuario = []
+    imagenperfil = []
     if tipobusqueda == "0":
         elementos["q"] = request.forms.get("hashtag")
         elementos["count"] = "100"
@@ -86,9 +86,9 @@ def findit():
                     if tweet["geo"]["coordinates"][0] != 0 and tweet["geo"]["coordinates"][1] != 0:
                         # Almacena la ubicacion en una lista
                         ubicaciones.append(tweet["geo"]["coordinates"])
-                tuit = tweet["text"]
-                nombreusuario = tweet["user"]["name"]
-                imagenperfil = tweet["user"]["profile_image_url"]
+                tuit.append(tweet["text"])
+                nombreusuario.append(tweet["user"]["name"])
+                imagenperfil.append(tweet["user"]["profile_image_url"])
         else:
             return ('<p>JSON no obtenido.</p>')
 
@@ -113,9 +113,9 @@ def findit():
                     if tweet["geo"]["coordinates"][0] != 0 and tweet["geo"]["coordinates"][1] != 0:
                         # Almacena la ubicacion en una lista
                         ubicaciones.append(tweet["geo"]["coordinates"])
-                tuit = tweet["text"]
-                nombreusuario = tweet["user"]["name"]
-                imagenperfil = tweet["user"]["profile_image_url"]
+                tuit.append(tweet["text"])
+                nombreusuario.append(tweet["user"]["name"])
+                imagenperfil.append(tweet["user"]["profile_image_url"])
         else:
             return ('<p>JSON no obtenido.</p>')
 

@@ -37,7 +37,7 @@ var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
         position: new google.maps.LatLng(ubicaciones[i][0], ubicaciones[i][1]),
         map: map
 		    });
-	var contenido="<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+tuit
+	var contenido="<img src='"+imagen[i]+"' style='float:left; padding: 5px;' /><strong>"+nombre[i]+"</strong>: "+tuit[i]
       var infowindow = new google.maps.InfoWindow({
 	 content: contenido
       });
