@@ -85,9 +85,9 @@ def findit():
                     if tweet["geo"]["coordinates"][0] != 0 and tweet["geo"]["coordinates"][1] != 0:
                         # Almacena la ubicacion en una lista
                         ubicaciones.append(tweet["geo"]["coordinates"])
-                tuit.append(str(tweet["text"].encode("latin1")))
-                nombreusuario.append(str(tweet["user"]["name"].encode("latin1")))
-                imagenperfil.append(str(tweet["user"]["profile_image_url"].encode("latin1")))
+                tuit.append(str(tweet["text"].encode("utf-8")))
+                nombreusuario.append(str(tweet["user"]["name"].encode("utf-8")))
+                imagenperfil.append(str(tweet["user"]["profile_image_url"].encode("utf-8")))
         else:
             return ('<p>JSON no obtenido.</p>')
 
@@ -112,9 +112,9 @@ def findit():
                     if tweet["geo"]["coordinates"][0] != 0 and tweet["geo"]["coordinates"][1] != 0:
                         # Almacena la ubicacion en una lista
                         ubicaciones.append(tweet["geo"]["coordinates"])
-                tuit.append(str(tweet["text"].encode("latin1")))
-                nombreusuario.append(str(tweet["user"]["name"].encode("latin1")))
-                imagenperfil.append(str(tweet["user"]["profile_image_url"].encode("latin1")))
+                tuit.append(str(tweet["text"].encode("utf-8")))
+                nombreusuario.append(str(tweet["user"]["name"].encode("utf-8")))
+                imagenperfil.append(str(tweet["user"]["profile_image_url"].encode("utf-8")))
         else:
             return ('<p>JSON no obtenido.</p>')
 
