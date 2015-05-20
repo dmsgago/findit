@@ -30,7 +30,8 @@ var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-var marker, i, contenido, infowindow;
+var marker, i, contenido;
+var infowindow = new google.maps.InfoWindow();
 
     for (i = 0; i < ubicaciones.length; i++) {  
       marker = new google.maps.Marker({
@@ -38,12 +39,10 @@ var marker, i, contenido, infowindow;
         map: map
 		    });
 	contenido="<img src='"+imagen[i]+"' style='float:left; padding: 5px;' /><strong>"+nombre[i]+"</strong>: "+tuit[i]
-      infowindow = new google.maps.InfoWindow({
-	 content: contenido
-      });
 		    
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
+          infowindow.setContent(contenido);
           infowindow.open(map, marker);
         }
       })(marker, i));
