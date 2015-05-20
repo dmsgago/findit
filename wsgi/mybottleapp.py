@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 from bottle import default_app, get, post, template, request, static_file, response
 import requests
