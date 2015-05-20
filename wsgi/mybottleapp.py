@@ -85,10 +85,10 @@ def findit():
                     # Comprueba que la geolocalizacion no es cero
                     if tweet["geo"]["coordinates"][0] != 0 and tweet["geo"]["coordinates"][1] != 0:
                         # Almacena la ubicacion en una lista
-                        ubicaciones.append(tweet["geo"]["coordinates"])
+                        ubicaciones.append(str(tweet["geo"]["coordinates"]).encode("latin1"))
                 tuit.append(tweet["text"])
-                nombreusuario.append(tweet["user"]["name"])
-                imagenperfil.append(tweet["user"]["profile_image_url"])
+                nombreusuario.append(str(tweet["user"]["name"].encode("latin1"))
+                imagenperfil.append(str(tweet["user"]["profile_image_url"].encode("latin1"))
         else:
             return ('<p>JSON no obtenido.</p>')
 
@@ -112,10 +112,10 @@ def findit():
                     # Comprueba que la geolocalizacion no es cero
                     if tweet["geo"]["coordinates"][0] != 0 and tweet["geo"]["coordinates"][1] != 0:
                         # Almacena la ubicacion en una lista
-                        ubicaciones.append(tweet["geo"]["coordinates"])
+                        ubicaciones.append(str(tweet["geo"]["coordinates"].encode("latin1"))
                 tuit.append(tweet["text"])
-                nombreusuario.append(tweet["user"]["name"])
-                imagenperfil.append(tweet["user"]["profile_image_url"])
+                nombreusuario.append(str(tweet["user"]["name"].encode("latin1"))
+                imagenperfil.append(str(tweet["user"]["profile_image_url"].encode("latin1"))
         else:
             return ('<p>JSON no obtenido.</p>')
 
