@@ -30,15 +30,15 @@ var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-  var marker, i;
+var marker, i, contenido, infowindow;
 
     for (i = 0; i < ubicaciones.length; i++) {  
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(ubicaciones[i][0], ubicaciones[i][1]),
         map: map
 		    });
-	var contenido="<img src='"+imagen[i]+"' style='float:left; padding: 5px;' /><strong>"+nombre[i]+"</strong>: "+tuit[i]
-      var infowindow = new google.maps.InfoWindow({
+	contenido="<img src='"+imagen[i]+"' style='float:left; padding: 5px;' /><strong>"+nombre[i]+"</strong>: "+tuit[i]
+      infowindow = new google.maps.InfoWindow({
 	 content: contenido
       });
 		    
