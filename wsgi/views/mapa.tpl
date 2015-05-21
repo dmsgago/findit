@@ -20,9 +20,8 @@
     <script>
 function initialize() {
 var ubicaciones = {{ubicaciones}};
-var tuit = {{!tuit}};
-var nombre = {{!nombre}};
-var imagen = {{!imagen}};
+var tuit = {{tuit}};
+
 var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
   var mapOptions = {
     zoom: 6,
@@ -30,7 +29,7 @@ var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-var marker, i, contenido;
+var marker, i;
 var infowindow = new google.maps.InfoWindow();
 
     for (i = 0; i < ubicaciones.length; i++) {  
@@ -38,7 +37,7 @@ var infowindow = new google.maps.InfoWindow();
         position: new google.maps.LatLng(ubicaciones[i][0], ubicaciones[i][1]),
         map: map
 		    });
-	contenido="<img src='"+imagen[i]+"' style='float:left; padding: 5px;' /><strong>"+nombre[i]+"</strong>: "+tuit[i]
+	
 		    
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
