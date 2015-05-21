@@ -67,9 +67,10 @@ def get_verifier():
 def findit():
     tipobusqueda = request.forms.get("TipoBusqueda")
     ubicaciones = []
-    tuit = []
-    nombreusuario = []
-    imagenperfil = []
+    tuit = ""
+    nombreusuario = ""
+    imagenperfil = ""
+    fecha = ""
     if tipobusqueda == "0":
         elementos["q"] = request.forms.get("hashtag")
         elementos["count"] = "100"
@@ -116,7 +117,9 @@ def findit():
                         imagen = str(tweet["user"]["profile_image_url"])
                         texto = tweet["text"].encode("utf-8")
                         nombre = tweet["user"]["name"].encode("utf-8")
-                        tuit.append("<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+texto)
+                        fecha = tweet["created_at"].encode("utf-8")
+                        fecha = fecha[:19]
+                        tuit.append("<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+texto+" ("+fecha+")")
         else:
             return ('<p>JSON no obtenido.</p>')
 
