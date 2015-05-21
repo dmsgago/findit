@@ -114,9 +114,10 @@ def findit():
                         # Almacena la ubicacion en una lista
                         ubicaciones.append(tweet["geo"]["coordinates"])
                         imagen = tweet["user"]["profile_image_url"]
-                        texto = tweet["text"]
-                        nombre = tweet["user"]["name"]
-                        tuit.append("<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+texto)
+                        #texto = tweet["text"]
+                        #nombre = tweet["user"]["name"]
+                        #tuit.append("<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+texto)
+                        tuit.append(imagen);
         else:
             return ('<p>JSON no obtenido.</p>')
 
