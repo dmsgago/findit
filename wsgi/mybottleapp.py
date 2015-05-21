@@ -67,10 +67,7 @@ def get_verifier():
 def findit():
     tipobusqueda = request.forms.get("TipoBusqueda")
     ubicaciones = []
-    tuit = ""
-    nombreusuario = ""
-    imagenperfil = ""
-    fecha = ""
+    tuit = []
     if tipobusqueda == "0":
         elementos["q"] = request.forms.get("hashtag")
         elementos["count"] = "100"
