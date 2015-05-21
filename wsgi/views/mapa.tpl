@@ -20,7 +20,7 @@
     <script>
 function initialize() {
 var ubicaciones = {{ubicaciones}};
-var tuit = {{tuit}};
+var tuit = {{!tuit}};
 
 var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
   var mapOptions = {
