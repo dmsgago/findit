@@ -116,7 +116,7 @@ def findit():
                         nombre = tweet["user"]["name"].encode("utf-8", "ignore")
                         fecha = tweet["created_at"].encode("utf-8")
                         fecha = fecha[:19]
-                        prueba = "▶▶▶Don't forget lo Love yourself ☜☜"
+                        prueba = u"▶▶▶Don't forget lo Love yourself ☜☜"
                         tuit.append("<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+texto+" ("+fecha+")")
         else:
             return ('<p>JSON no obtenido.</p>')
