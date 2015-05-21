@@ -111,7 +111,7 @@ def findit():
                     if tweet["geo"]["coordinates"][0] != 0 and tweet["geo"]["coordinates"][1] != 0:
                         # Almacena la ubicacion en una lista
                         ubicaciones.append(tweet["geo"]["coordinates"])
-                        imagen = str(tweet["user"]["profile_image_url"])
+                        imagen = unicode(tweet["user"]["profile_image_url"])
                         texto = unicode(tweet["text"])
                         nombre = unicode(tweet["user"]["name"])
                         fecha = tweet["created_at"].encode("utf-8")
