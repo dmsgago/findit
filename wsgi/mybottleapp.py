@@ -113,7 +113,7 @@ def findit():
                         ubicaciones.append(tweet["geo"]["coordinates"])
                         imagen = tweet["user"]["profile_image_url"].encode("utf-8", "ignore")
                         texto = tweet["text"].encode("utf-8", "ignore")
-                        nombre = tweet["user"]["name"]encode("utf-8", "ignore")
+                        nombre = tweet["user"]["name"].encode("utf-8", "ignore")
                         fecha = tweet["created_at"].encode("utf-8")
                         fecha = fecha[:19]
                         tuit.append("<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+texto+" ("+fecha+")")
