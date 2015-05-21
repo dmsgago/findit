@@ -14,7 +14,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <link rel="icon" type="image/png" href="/static/findit-ico.png">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="latin1">
+    <meta charset="utf-8">
     <title>Mapa</title>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
     <script>
