@@ -21,7 +21,7 @@
 function initialize() {
 var ubicaciones = {{ubicaciones}};
 var tuit = {{!tuit}};
-
+alert(tuit[0]);
 var myLatlng = new google.maps.LatLng(ubicaciones[0][0],ubicaciones[0][1]);
   var mapOptions = {
     zoom: 6,
