@@ -114,7 +114,7 @@ def findit():
                         # Almacena la ubicacion en una lista
                         ubicaciones.append(tweet["geo"]["coordinates"])
                         imagen = tweet["user"]["profile_image_url"]
-                        texto = str(tweet["text"].encode("latin1"))
+                        texto = str(tweet["text"].encode("utf-16"))
                         nombre = tweet["user"]["name"]
                         tuit.append("<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+texto)
         else:
