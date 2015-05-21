@@ -85,9 +85,10 @@ def findit():
                     if tweet["geo"]["coordinates"][0] != 0 and tweet["geo"]["coordinates"][1] != 0:
                         # Almacena la ubicacion en una lista
                         ubicaciones.append(tweet["geo"]["coordinates"])
-                        tuit.append(str(tweet["text"].encode("utf-8")))
-                        nombreusuario.append(str(tweet["user"]["name"].encode("utf-8")))
-                        imagenperfil.append(str(tweet["user"]["profile_image_url"].encode("utf-8")))
+                        imagen = str(tweet["user"]["profile_image_url"].encode("utf-8"))
+                        texto = str(tweet["text"].encode("utf-8"))
+                        nombre = str(tweet["user"]["name"].encode("utf-8"))
+                        tuit.append("<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+texto)
         else:
             return ('<p>JSON no obtenido.</p>')
 
@@ -95,7 +96,7 @@ def findit():
         if len(ubicaciones) == 0:
             return '<p> No hay ubicaciones </p>'
         else:
-            return template('mapa.tpl', ubicaciones=ubicaciones, tuit=tuit, nombre=nombreusuario, imagen=imagenperfil)
+            return template('mapa.tpl', ubicaciones=ubicaciones, tuit=tuit)
 
     #Busqueda por nombre de usuario
     else:
@@ -112,9 +113,9 @@ def findit():
                     if tweet["geo"]["coordinates"][0] != 0 and tweet["geo"]["coordinates"][1] != 0:
                         # Almacena la ubicacion en una lista
                         ubicaciones.append(tweet["geo"]["coordinates"])
-                        imagen = str(tweet["user"]["profile_image_url"].encode("utf-8"))
-                        texto = str(tweet["text"].encode("utf-8"))
-                        nombre = str(tweet["user"]["name"].encode("utf-8"))
+                        imagen = str(tweet["user"]["profile_image_url"].encode("latin1"))
+                        texto = str(tweet["text"].encode("latin1"))
+                        nombre = str(tweet["user"]["name"].encode("latin1"))
                         tuit.append("<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+texto)
         else:
             return ('<p>JSON no obtenido.</p>')
@@ -123,7 +124,7 @@ def findit():
         if len(ubicaciones) == 0:
             return '<p> No hay ubicaciones </p>'
         else:
-            return template('mapa.tpl', ubicaciones=ubicaciones, tuit=tuit, nombre=nombreusuario, imagen=imagenperfil)
+            return template('mapa.tpl', ubicaciones=ubicaciones, tuit=tuit)
 
 # This must be added in order to do correct path lookups for the views
 import os
