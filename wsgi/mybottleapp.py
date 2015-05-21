@@ -116,7 +116,6 @@ def findit():
                         nombre = tweet["user"]["name"].encode("utf-8", "ignore")
                         fecha = tweet["created_at"].encode("utf-8")
                         fecha = fecha[:19]
-                        prueba = u"▶▶▶Don't forget lo Love yourself ☜☜"
                         tuit.append("<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+texto+" ("+fecha+")")
         else:
             return ('<p>JSON no obtenido.</p>')
@@ -125,7 +124,7 @@ def findit():
         if len(ubicaciones) == 0:
             return '<p> No hay ubicaciones </p>'
         else:
-            return template('mapa.tpl', ubicaciones=ubicaciones, tuit=tuit, prueba=prueba)
+            return template('mapa.tpl', ubicaciones=ubicaciones, tuit=tuit)
 
 # This must be added in order to do correct path lookups for the views
 import os
