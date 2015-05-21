@@ -39,11 +39,10 @@ var infowindow = new google.maps.InfoWindow();
         map: map
 		    });
 	contenido="<img src='"+imagen[i]+"' style='float:left; padding: 5px;' /><strong>"+nombre[i]+"</strong>: "+tuit[i]
-alert(contenido);
 		    
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-          infowindow.setContent(contenido);
+          infowindow.setContent(tuit[i]);
           infowindow.open(map, marker);
         }
       })(marker, i));
