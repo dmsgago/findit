@@ -11,6 +11,7 @@
     </a>
   </div>
 </div>
+</div>
 <!-- Bootstrap -->
 <script src="static/js/vendor/bootstrap.min.js"></script>
 </body>
