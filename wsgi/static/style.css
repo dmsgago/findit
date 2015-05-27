@@ -387,10 +387,15 @@ footer .logo img {
     line-height: 30px;
 }
 .columna1 {
-    padding: 48px;
+    padding: 48px 48px 48px 25%;
+    width: 300px;
+    position: relative;
 }
 .columna2 {
-    padding: 48px;
+    padding: 48px 48px 48px 50%;
+    width: 300px;
+    position: absolute;
+    top: 0px;
 }
 .promo-text p {
     padding: 35px 0 0;
