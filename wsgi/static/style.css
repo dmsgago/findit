@@ -386,6 +386,12 @@ footer .logo img {
     font-size: 18px;
     line-height: 30px;
 }
+.columna1 {
+    padding: 48px;
+}
+.columna2 {
+    padding: 48px;
+}
 .promo-text p {
     padding: 35px 0 0;
 }
