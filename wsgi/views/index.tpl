@@ -1,5 +1,5 @@
 % include('header.tpl')
-				<li><a href="/" title="Busca un objeto en Twitter">Findit</a></li>
+				<li class="active"><a href="/" title="Busca un objeto en Twitter">Findit</a></li>
 			</ul>
 		</div>
 	</div>
