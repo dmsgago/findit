@@ -5,11 +5,12 @@
 	</div>
 </div>
    <div class="jumbotron">
-    <a href="{{authorize_url}}">
-       <img src="/static/images/login.png" onmouseover="this.src='/static/images/login2.png';" onmouseout="this.src='/static/images/login.png';"/>
-    </a>
+      <div class="container">
+      	 <a href="{{authorize_url}}">
+       	    <img src="/static/images/login.png" onmouseover="this.src='/static/images/login2.png';" onmouseout="this.src='/static/images/login.png';"/>
+    	 </a>
+      </div>
    </div>
- </div>
 </div>
 <!-- Bootstrap -->
 <script src="static/js/vendor/bootstrap.min.js"></script>
