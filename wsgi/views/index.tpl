@@ -7,7 +7,7 @@
 <div class="jumbotron">
   <div class="container">
     <a href="{{authorize_url}}">
-       <img src="/static/images/login.png" onmouseover="this.src='/static/images/login2.png';" onmouseout="this.src='/static/images/login2.png';"/>
+       <img src="/static/images/login.png" onmouseover="this.src='/static/images/login2.png';" onmouseout="this.src='/static/images/login.png';"/>
     </a>
   </div>
 </div>
