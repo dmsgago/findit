@@ -8,7 +8,7 @@
 			<a class="promo-button" href="{{authorize_url}}">Iniciar sesi&oacute;n</a>
 		    </p>
                 </div><!-- promo-text -->
-                <img src="/static/images/mapgoogle.png" alt="logo de google map" />
+                <img src="/static/images/mapgoogle.png" alt="logo de google map"></img>
             </div><!-- wrap -->
         </section><!-- promo -->
     </section><!-- main -->
