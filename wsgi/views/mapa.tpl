@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/static/style.css">
   <style>
       html, body, #map-canvas {
-       height: 100%;
+       height: 90%;
        margin: 0px;
        padding: 0px;
       }
