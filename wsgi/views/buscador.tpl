@@ -15,8 +15,6 @@
       <p><input name="username" size="20" maxlength="50" type="text" placeholder="@username"/></p>
       <p><button type="submit" class="button" value="1" name="TipoBusqueda" />Enviar</button></p>
      </div>
-      <!-- Bootstrap -->
-      <script src="static/js/vendor/bootstrap.min.js"></script>
     </form>
   </div>  
 </div>
