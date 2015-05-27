@@ -6,7 +6,6 @@
         <p>
 	   <button type="submit" class="button" value="0" name="TipoBusqueda" />Enviar</button>
         </p>
-     </div>
         <p>
 	   <input name="username" size="20" maxlength="50" type="text" placeholder="@username"/>
 	</p>
