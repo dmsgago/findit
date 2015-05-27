@@ -86,6 +86,8 @@ def findit():
                         imagen = str(tweet["user"]["profile_image_url"].encode("utf-8"))
                         texto = str(tweet["text"].encode("utf-8"))
                         nombre = str(tweet["user"]["screen_name"].encode("utf-8"))
+                        fecha = tweet["created_at"].encode("utf-8")
+                        fecha = fecha[:19]
                         tuit.append("<img src='"+imagen+"' style='float:left; padding: 5px;' /><a href='https://twitter.com/"+nombre+"'><strong>"+nombre+"</strong></a>: "+texto+" ("+fecha+")")
         else:
             return ('<p>JSON no obtenido.</p>')
