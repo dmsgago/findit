@@ -419,8 +419,8 @@ footer .logo img {
     transition: all 0.15s linear;
 }
 .promo-button:hover {
-    background-color: #e2f9f5;
-    color: #26a5d1;
+    background-color: #000000;
+    color: #FE0000;
 }
 .promo-button:active {
     color: #188bb2;
