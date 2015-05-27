@@ -1,9 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>FindIT</title>
+    <link rel="icon" type="image/png" href="/static/findit-ico.png">
+    <link rel="stylesheet" href="/static/style.css">
   <style>
       html, body, #map-canvas {
        height: 100%;
@@ -51,23 +54,20 @@ google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
   <body>
-    	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-	     <div class="container">
-	     	  <div class="navbar-header">
-		       
-		  </div>
-				<li><a href="/" title="Busca un objeto en Twitter">Findit</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
-		  <div class="navbar-collapse navbar-responsive-collapse collapse">
-		       	<ul class="nav navbar-nav pull-right">
-		       	   <li><a href="/" title="Busca un objeto en Twitter">Findit</a></li>
-			</ul>
-		  </div>
-	     </div>
-	</div>
+    	<header>
+            <div class="wrap">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/static/images/logo.jpg" width="262" height="52" alt="Logo de Findit">
+                    </a>
+                </div><!-- logo -->
+                <div class="social">
+                    <ul class="clearfix">
+                        <li><a class="social-twitter" href="https://twitter.com/diego_mart11" title="twitter">twitter</a></li>
+                    </ul>
+                </div><!--social -->
+            </div><!-- wrap -->
+        </header>
 	<div id="map-canvas">
 	</div>
   </body>
