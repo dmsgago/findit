@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <title>FindIT</title>
     <link rel="icon" type="image/png" href="/static/findit-ico.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/style.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
 </head>
