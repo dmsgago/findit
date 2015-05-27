@@ -70,5 +70,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
         </header>
 	<div id="map-canvas">
 	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/library.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/retina.js"></script>
   </body>
 </html>
