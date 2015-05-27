@@ -6,7 +6,8 @@
 </div>
 <div class="jumbotron">
   <div class="container">
-    <a href="{{authorize_url}}" class="btn btn-outline-inverse btn-lg" onclick="ga('send', 'event', 'Jumbotron actions');">Iniciar sesi&oacute;n
+    <a href="{{authorize_url}}">
+       <img src="/static/images/login.png" onmouseover="this.src='/static/images/login2.png';" onmouseout="this.src='/static/images/login2.png';"/>
     </a>
   </div>
 </div>
