@@ -6,15 +6,11 @@
      	  <div class="promo-text">
                <p>
 		<input name="hashtag" size="20" maxlength="500" type="text" placeholder="#Hashtag" autofocus/>
-	       </p>
-               <p>
 		<button type="submit" class="button" value="0" name="TipoBusqueda" />Enviar Hashtag</button>
 	       </p>
 	  <div class="promo-title">
 	       <p>
 		<input name="username" size="20" maxlength="50" type="text" placeholder="@username"/>
-	       </p>
-               <p>
 		<button type="submit" class="button" value="1" name="TipoBusqueda" />Enviar Usuario</button>
 	       </p>
 	    </div>
