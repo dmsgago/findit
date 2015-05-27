@@ -56,10 +56,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	     	  <div class="navbar-header">
 		       
 		  </div>
+				<li><a href="/" title="Busca un objeto en Twitter">Findit</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
 		  <div class="navbar-collapse navbar-responsive-collapse collapse">
 		       	<ul class="nav navbar-nav pull-right">
 		       	   <li><a href="/" title="Busca un objeto en Twitter">Findit</a></li>
-			 </ul>
+			</ul>
 		  </div>
 	     </div>
 	</div>

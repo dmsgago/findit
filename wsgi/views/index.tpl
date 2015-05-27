@@ -6,7 +6,8 @@
 </div>
 <div class="jumbotron">
   <div class="container">
-    <a href="{{authorize_url}}">Buscar Tuit</a>
+    <a href="{{authorize_url}}" class="btn btn-outline-inverse btn-lg" onclick="ga('send', 'event', 'Jumbotron actions');">Iniciar sesi&oacute;n
+    </a>
   </div>
 </div>
 <!-- Bootstrap -->
