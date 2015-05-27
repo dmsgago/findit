@@ -112,12 +112,13 @@ def findit():
                     if tweet["geo"]["coordinates"][0] != 0 and tweet["geo"]["coordinates"][1] != 0:
                         # Almacena la ubicacion en una lista
                         ubicaciones.append(tweet["geo"]["coordinates"])
+                        #Almacena los datos del tuit
                         imagen = tweet["user"]["profile_image_url"].encode("utf-8", "ignore")
                         texto = tweet["text"].encode("utf-8", "ignore")
-                        nombre = tweet["user"]["name"].encode("utf-8", "ignore")
+                        nombre = tweet["screen_name"].encode("utf-8", "ignore")
                         fecha = tweet["created_at"].encode("utf-8")
                         fecha = fecha[:19]
-                        tuit.append("<img src='"+imagen+"' style='float:left; padding: 5px;' /><strong>"+nombre+"</strong>: "+texto+" ("+fecha+")")
+                        tuit.append("<img src='"+imagen+"' style='float:left; padding: 5px;' /><a href='https://twitter.com/"+nombre+"'><strong>"+nombre+"</strong></a>: "+texto+" ("+fecha+")")
         else:
             return ('<p>JSON no obtenido.</p>')
 
