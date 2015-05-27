@@ -94,7 +94,7 @@ def findit():
 
         # Comprueba que se han obtenido ubicaciones
         if len(ubicaciones) == 0:
-            return '<p> No hay ubicaciones </p>'
+            return template('nogeo.tpl')
         else:
             return template('mapa.tpl', ubicaciones=ubicaciones, tuit=tuit)
 
@@ -126,7 +126,7 @@ def findit():
 
         # Comprueba que se han obtenido ubicaciones
         if len(ubicaciones) == 0:
-            return '<p> No hay ubicaciones </p>'
+            return template('nogeo.tpl')
         else:
             return template('mapa.tpl', ubicaciones=ubicaciones, tuit=tuit)
 
