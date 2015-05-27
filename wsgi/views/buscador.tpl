@@ -2,7 +2,8 @@
 <section class="promo">
      <div class="wrap">
      <form action="/map" method="post">
-     	  <div class="columna1">
+     <div class="wrap">
+     	  <div class="promo-text">
                <p>
 		<input name="hashtag" size="20" maxlength="500" type="text" placeholder="#Hashtag" autofocus/>
 	       </p>
@@ -10,7 +11,7 @@
 		<button type="submit" class="button" value="0" name="TipoBusqueda" />Enviar Hashtag</button>
 	       </p>
 	  </div>
-	  <div class="columna2">
+	  <div class="promo-title">
 	       <p>
 		<input name="username" size="20" maxlength="50" type="text" placeholder="@username"/>
 	       </p>
@@ -18,6 +19,7 @@
 		<button type="submit" class="button" value="1" name="TipoBusqueda" />Enviar Usuario</button>
 	       </p>
 	  </div>
+	</div>
       </div><!-- wrap -->
 </section><!-- promo -->
 </section><!-- main -->
