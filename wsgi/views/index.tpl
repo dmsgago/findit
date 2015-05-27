@@ -3,7 +3,7 @@
             <div class="wrap">
                 <div class="promo-text">
                     <div class="promo-title">FINDIT</div>
-                    <p>Esta herramienta permite geolocalizar tuit's y ubicarlos en un mapa</p>
+                    <p>Esta herramienta que permite geolocalizar tuit's y ubicarlos en un mapa</p>
                     <p>
 			<a class="promo-button" href="{{authorize_url}}">Iniciar sesi&oacute;n</a>
 		    </p>
